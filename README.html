@@ -15439,13 +15439,15 @@ GW2D8GabbbbZGW2D8GabbbbZGW2D8GabbbbZGW2D8GabbbbZGW2D8GabbbbZGW2D8GabbbbZGW2D
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Here I'm doing some image transformation, brightness random changes and image rotation to let image be more "live". This code is taken from here: <a href="https://github.com/vxy10/ImageAugmentation">https://github.com/vxy10/ImageAugmentation</a>.
-I use 4 types of image preprocessing techniques:</p>
+I use 4 types for data augmentation:</p>
 <ol>
 <li>Rotation - traffic signs can be visible from different point of views, so we need to train our net to be able recognize such cases</li>
 <li>Translation - our camera not always is targeting the center of screen to the traffic signs. So we need to be able to recognize a traffic sign on any position in image</li>
 <li>Shearing - to rotate the sign within the image - to see image from different angels</li>
 <li>Brightness random changing - to be ready for images with different level of brightness</li>
 </ol>
+<p>For data pre-processing I used Histogram Equalization technique. For more details I refered to <a href="http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html">http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html</a> and <a href="https://en.wikipedia.org/wiki/Histogram_equalization">https://en.wikipedia.org/wiki/Histogram_equalization</a>
+This technique is very usesful when images with backgrounds and foregrounds that are both bright or both dark, for example, or when the usable data of the image is represented by close contrast values.</p>
 
 </div>
 </div>
